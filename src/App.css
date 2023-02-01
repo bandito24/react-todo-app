@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
+body{
+  background-image: url('../public/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Yatra One';
+  margin: auto;
+  left: 10em;
+  width: 75%;
+  color: rgba(255,255,255,.8);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#question{
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: rgba(0,0,0,.5);
+  color: rgba(255,255,255,.8);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#input-container{
+  padding-top: 3em;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+input{
+  font-family: inherit;
+}
+
+.input-value{
+  margin: 1em;
+  padding: .8em;
+  width: 15em;
+}
+
+#submit{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: orange;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px black;
+  cursor: pointer;
+  padding: .5em;
 }
 
-.App-link {
-  color: #61dafb;
+#submit:hover{
+  background-color: aqua;
+  transition: background-color 400ms ease-in;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#input-form{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  right: .2em;
+
+}
+
+#todos-flex{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  top: 2em;
+  background-color: rgba(0,0,0,.5);
+  margin-top: 1em;
+  border-radius: 10px;
+  
+}
+
+.todo{
+  padding-right: 50px;
+  width: 150px;
+  position: relative;
+  left: 3.5em;
+}
+
+#todos-flex .button{
+  margin-right: 40px;
+  position: relative;
+  top: 1em;
+  width: 6em;
+  border-radius: 5px;
+  border: 0px;
+  font-family: inherit;
+  
+}
+
+#todos-flex .button:hover{
+  background-color: aqua;
+  transition: background-color 300ms ease-in;
+}
+
+#todos-flex .button:active{
+  background-color: pink;
+  transition: 0s;
+}
+
+
+#edit-todo{
+  /* display: flex;
+  flex-wrap: nowrap; */
+  position: absolute;
+  z-index: 1;
+ background-color: rgba(0,0,0, .8);
+ padding: 40px;
+ border-radius: 10px;
+ margin: auto;
+ top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#edit-submit{
+  margin: auto;
+}
+
+#time{
+  position: relative;
+  left: 2.4em;
+}
+#location{
+  position: relative;
+  right: .05em;
+}
+#todo{
+  position: relative;
+  left: 2.1em;
+}
+
+#form input, #form label{
+  margin-bottom: 20em;
+}
+
+#form label{
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#form input{
+  background-color: #b534d7;
+  margin-bottom: 10px;
+  color:white;
+  border-radius: 5px;
+  width: 8em;
+  
+}
+
+
+
+#form #update-submit{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+}
+#form #update-submit:hover{
+  background-color: #2E85EB;
+  transition: background-color 400ms linear;
+}
+
+
+
+@media only screen and (max-width: 1100px){
+  .todo{
+    padding-right: 10px;
+    width: 100px;
+    position: relative;
+    left: 3.5em;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 700px){
+  .todo{
+    padding-right: 10px;
+    width: 50px;
+    position: relative;
+    left: 3.5em;
+  }
+
+  .todo-container .button{
+    position: relative;
+    left: 5em;
+    margin-right: -300px; 
+  }
+  .todo-container{
+    position: relative;
+    right: 2em; 
   }
 }
